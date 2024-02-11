@@ -1,0 +1,34 @@
+.logo {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  height: 37px;
+}
+.material_logo {
+  display: flex;
+}
+.svg {
+  fill: rgb(49, 60, 161);
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.logo_center {
+  display: grid;
+  margin-left: 4px;
+  text-shadow: 1px 1px rgb(49, 60, 161);
+}
+
+@media (min-width: 597px) {
+  .logo {
+    margin-top: 9px;
+    height: 62px;
+  }
+  .svg {
+    width: 58px;
+    height: 58px;
+  }
+  .logo_center {
+    font-size: 30px;
+    margin-left: 12px;
+  }
+}
