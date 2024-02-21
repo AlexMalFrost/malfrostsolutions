@@ -11,7 +11,13 @@
 %templatelang:hover {
   color: white;
   background-color: rgb(49, 60, 161);
+  border: 1px solid white;
   transition: 500ms;
+}
+@mixin align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .none {
@@ -23,6 +29,8 @@
 }
 
 .menu {
+  position: relative;
+  right: 0px;
   padding-top: 8px;
   display: grid;
   grid-template-columns: auto auto;
@@ -38,7 +46,6 @@
   transition: 1000ms;
   position: absolute;
   display: grid;
-  grid-template-columns: auto;
   top: 48px;
   z-index: -1;
 }
@@ -46,18 +53,19 @@
   @extend %templatelang;
   margin-bottom: 4px;
   transform: translate(0px, 0px);
+  background-color: white;
 }
 .menu_lang_choose {
   @extend %templatelang;
 }
 .menu_logo {
+  align-items: center;
+  justify-content: center;
   height: 37px;
   width: 37px;
   background-color: rgb(49, 60, 161);
   border-radius: 4px;
   display: grid;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
 }
 .menu_material_logo {
@@ -77,6 +85,8 @@
 }
 @media (min-width: 597px) {
   .menu {
+    position: relative;
+    right: 3px;
     display: flex;
     background-color: white;
     height: 63px;
@@ -87,14 +97,8 @@
     height: 63px;
     margin-right: 4px;
   }
-  .menu_lang {
-    margin: 0px;
-    padding: 0px;
-  }
   .menu_lang_choose {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include align;
     font-size: 30px;
     width: 62px;
     height: 58px;
@@ -111,9 +115,7 @@
     margin: 6px 0px;
   }
   .menu_choose_list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include align;
     font-size: 30px;
     width: 62px;
     height: 62px;

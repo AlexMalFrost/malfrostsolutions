@@ -1,0 +1,48 @@
+.parallax {
+  top: 76px;
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  perspective: 10px;
+  height: 80vh;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.parallax::-webkit-scrollbar {
+  display: none;
+}
+.slidecontainer {
+  position: relative;
+  width: auto;
+  transform-style: preserve-3d;
+}
+.responcive {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transform: translateZ(-15px) scale(2.5);
+}
+.transparent {
+  position: relative;
+  display: flex;
+  width: 100%;
+  bottom: 880px;
+  transform: translateZ(-10px) scale(2);
+}
+.transparentt {
+  bottom: 480px;
+  position: absolute;
+  display: flex;
+  height: fit-content;
+  transform: translateZ(-5px) scale(1.5);
+}
+@media (min-width: 597px) {
+  .slidecontainer {
+    top: 76px;
+  }
+  .responcive {
+    width: 100%;
+    height: fit-content;
+    object-fit: cover;
+  }
+}

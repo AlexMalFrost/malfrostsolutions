@@ -4,4 +4,12 @@
   height: fit-content;
   width: 86%;
   justify-content: space-between;
+  background-color: white;
+  padding-bottom: 2px;
+  z-index: 1;
+}
+@media (min-width: 597px) {
+  .header {
+    padding-bottom: 4px;
+  }
 }

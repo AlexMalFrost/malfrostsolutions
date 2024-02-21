@@ -1,4 +1,6 @@
 .logo {
+  position: relative;
+  left: 1px;
   margin-top: 8px;
   display: flex;
   align-items: center;
@@ -20,6 +22,8 @@
 
 @media (min-width: 597px) {
   .logo {
+    position: relative;
+    left: 1px;
     margin-top: 9px;
     height: 62px;
   }
