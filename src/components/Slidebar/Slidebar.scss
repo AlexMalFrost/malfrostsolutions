@@ -1,5 +1,6 @@
 .parallax {
   top: 76px;
+  border-radius: 10px;
   position: relative;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -48,20 +49,27 @@
   .slideh1 {
     position: absolute;
     width: 100%;
+    top: -20px;
+    display: grid;
+    background-image: linear-gradient(230deg, rgb(252, 169, 68), rgb(49, 60, 161));
+    -webkit-background-clip: text;
+    color: transparent;
+    z-index: 1;
+    font-size: 28px;
+  }
+  .slideh1row {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    color: rgb(102, 102, 102);
-    text-shadow: 1px 1px rgb(49, 60, 161);
-    top: 40px;
-    z-index: 2;
+    justify-content: space-around;
   }
   .topslidetext {
     position: relative;
-    bottom: 202px;
+    bottom: 212px;
   }
   .slideh2 {
-    color: rgb(254, 183, 96);
-    text-shadow: 1px 1px rgb(49, 60, 161);
+    color: rgb(252, 169, 68);
+    text-shadow: 1px 2px rgb(49, 60, 161);
+    font-size: 42px;
   }
   .slidep {
     color: rgb(0, 0, 96);

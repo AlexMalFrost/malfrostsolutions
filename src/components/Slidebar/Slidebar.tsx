@@ -5,7 +5,11 @@ const Slidebar: React.FC = () => {
   return (
     <div className="parallax">
       <div className="slideh1">
-        <h1>Best buisness IT solutions for your City!</h1>
+        <div className="slideh1row">
+          <h1>Your City</h1>
+          <h1>Your Life</h1>
+        </div>
+        <h1>Your Rules!</h1>
       </div>
       <div className="slidecontainer">
         <img
@@ -25,8 +29,8 @@ const Slidebar: React.FC = () => {
         />
       </div>
       <div className="topslidetext">
-        <h2 className="slideh2">We make business easier!</h2>
-        <p className="slidep">We do solutions, you do Profit.</p>
+        <h2 className="slideh2">Making business easier!</h2>
+        <p className="slidep">We do Solutions, You do Profit.</p>
       </div>
       <div className="downslidetext">
         <p>
