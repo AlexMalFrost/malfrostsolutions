@@ -34,12 +34,14 @@ const Slidebar: React.FC = () => {
       </div>
       <div className="downslidetext">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, expedita dolore
-          commodi animi, quidem natus, officia eligendi laborum nihil debitis ipsam a aut porro
-          nostrum enim eum amet dignissimos impedit! ipsum Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Doloremque, expedita dolore commodi animi, quidem natus, officia
-          eligendi laborum nihil debitis ipsam a aut porro nostrum enim eum amet dignissimos
-          impedit!
+          Welcome to the world of high speeds and precise results! We are team of professionals
+          specializing in providing innovative business solutions and advanced IT technologies. Our
+          goal is to help your business harmoniously fit into a dynamic urban environment, ensuring
+          rapid growth and maximum profit. Our company has flexibility and adaptability, allowing us
+          to find optimal solutions for the most complex tasks. We guarantee the confidentiality and
+          security of your data, as well as the efficiency of performing all assigned tasks. Your
+          success is our main goal! We are ready to make the most daring and ambitious ideas come
+          true, so your business becomes even more successful and competitive.
         </p>
       </div>
     </div>

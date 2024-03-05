@@ -1,0 +1,15 @@
+.fences {
+  width: 100%;
+  display: flex;
+}
+.fencecontainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.fenceimage {
+  width: 20vw;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}

@@ -3,3 +3,17 @@
   grid-template-columns: 7% 86% 7%;
   height: 100vh;
 }
+.centerside {
+  display: grid;
+}
+.pages_header {
+  z-index: 1;
+}
+.pages_slidebar {
+  top: 76px;
+  position: relative;
+  padding-bottom: 92px;
+}
+.pages_fence {
+  top: 400px;
+}
