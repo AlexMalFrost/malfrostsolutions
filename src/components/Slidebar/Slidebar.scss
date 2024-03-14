@@ -74,7 +74,7 @@
   }
   .topslidetext {
     position: relative;
-    bottom: 9.2vw;
+    bottom: calc(43.6vw - 530px);
   }
   .slideh2 {
     color: rgb(252, 169, 68);
@@ -121,7 +121,7 @@
   }
   .topslidetext {
     position: relative;
-    bottom: 6.6vw;
+    bottom: calc(18.6vw - 172px);
   }
   .slideh2 {
     color: rgb(252, 169, 68);
@@ -165,7 +165,7 @@
   }
   .topslidetext {
     position: relative;
-    top: -26px;
+    top: calc(-9.3vw + 70px);
   }
   .slideh2 {
     font-size: 34px;
@@ -219,15 +219,55 @@
     top: 2vw;
   }
 }
-@media (max-width: 426px) {
+@media (max-width: 597px) {
   .parallax {
     position: relative;
-    height: 66vw;
-    top: -9.8vw;
+    height: calc(70vw + (70vw / 596));
+    top: calc(-1.1vw - 22px);
   }
   .responcive {
     position: relative;
-    top: -12vw;
+    top: calc(1.8vw - 68px);
+  }
+  .transparent {
+    width: 100%;
+    bottom: 70vw;
+  }
+  .transparentt {
+    bottom: 35vw;
+    width: 100%;
+  }
+  .slideh1 {
+    top: -1vw;
+  }
+  .slideh1row {
+    font-size: 2vw;
+  }
+  .topslidetext {
+    position: relative;
+    top: calc(0vw + (60vw / 596));
+  }
+  .slideh2 {
+    font-size: 4vw;
+  }
+  .slidep {
+    color: rgb(0, 0, 96);
+    font-size: 2.4vw;
+  }
+  .downslidetext {
+    position: relative;
+    font-size: 1.96vw;
+  }
+}
+@media (max-width: 426px) {
+  .parallax {
+    position: relative;
+    height: calc(52vw + 80px);
+    top: calc(6.4vw - 56px);
+  }
+  .responcive {
+    position: relative;
+    top: calc(11vw - 112px);
   }
   .transparent {
     width: 100%;
@@ -256,25 +296,26 @@
   }
   .downslidetext {
     position: relative;
-    font-size: 1.7vw;
+    font-size: 1.9vw;
+    text-shadow: 0.1px 0.2px black;
   }
 }
 @media (max-width: 376px) {
   .parallax {
     position: relative;
-    height: 70vw;
-    top: -14.6vw;
+    height: calc(-55.8vw + 492px);
+    top: calc(-1vw - 24px);
   }
   .responcive {
     position: relative;
-    top: -12vw;
+    top: calc(89.6vw - 414px);
   }
   .transparent {
     width: 100%;
-    bottom: 70vw;
+    bottom: 80vw;
   }
   .transparentt {
-    bottom: 35vw;
+    bottom: 40vw;
     width: 100%;
   }
   .slideh1 {
@@ -285,7 +326,7 @@
   }
   .topslidetext {
     position: relative;
-    top: -2vw;
+    top: calc(60vw - 234px);
   }
   .slideh2 {
     font-size: 3.4vw;
@@ -296,25 +337,26 @@
   }
   .downslidetext {
     position: relative;
-    font-size: 1.7vw;
+    font-size: 1.9vw;
+    text-shadow: 0.1px 0.2px black;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 321px) {
   .parallax {
     position: relative;
-    height: 80vw;
-    top: -23vw;
+    height: 100vw;
+    top: -28px;
   }
   .responcive {
     position: relative;
-    top: -11vw;
+    top: -43vw;
   }
   .transparent {
     width: 100%;
-    bottom: 70vw;
+    bottom: 90vw;
   }
   .transparentt {
-    bottom: 35vw;
+    bottom: 45vw;
     width: 100%;
   }
   .slideh1 {
@@ -325,7 +367,7 @@
   }
   .topslidetext {
     position: relative;
-    top: -1.1vw;
+    top: -4vw;
   }
   .slideh2 {
     font-size: 3.4vw;
@@ -336,6 +378,7 @@
   }
   .downslidetext {
     position: relative;
-    font-size: 1.7vw;
+    font-size: 7.4px;
+    text-shadow: 0.1px 0.2px black;
   }
 }

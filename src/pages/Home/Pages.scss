@@ -1,7 +1,6 @@
 .pages {
   display: grid;
   grid-template-columns: 7% 86% 7%;
-  height: 100vh;
 }
 .centerside {
   display: grid;
@@ -16,4 +15,154 @@
 }
 .pages_fence {
   top: 400px;
+}
+.pages_input {
+  display: grid;
+  grid-template-columns: 90% 10% 0%;
+  width: 100%;
+  padding-top: 22px;
+  padding-bottom: 10px;
+  align-items: center;
+}
+.pages_input_input {
+  border-radius: 10px;
+  height: 3vw;
+  padding: 0 0 0 1%;
+}
+.input_button {
+  height: 3.2vw;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 22px;
+}
+.input_clear {
+  position: relative;
+  width: 2.1vw;
+  right: 11.1vw;
+  opacity: 0.3;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+@media (max-width: 1025px) {
+  .pages_input_input {
+    height: 4vw;
+  }
+  .input_button {
+    height: 4.3vw;
+    font-size: 22px;
+  }
+  .input_clear {
+    width: 2.5vw;
+    right: 11.6vw;
+  }
+}
+@media (max-width: 768px) {
+  .pages_input_input {
+    height: 6vw;
+  }
+  .input_button {
+    height: 6.5vw;
+    font-size: 18px;
+  }
+  .input_clear {
+    width: 3.6vw;
+    right: 13vw;
+  }
+}
+@media (max-width: 597px) {
+  .pages_slidebar {
+    padding-bottom: 58px;
+  }
+  .pages_input_input {
+    height: 8vw;
+  }
+  .input_button {
+    display: flex;
+    height: 8.6vw;
+    font-size: 2.6vw;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+  }
+  .input_clear {
+    width: 4.4vw;
+    right: 14.2vw;
+  }
+}
+@media (max-width: 426px) {
+  .pages_slidebar {
+    padding-bottom: 58px;
+  }
+  .pages_input {
+    height: fit-content;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+  }
+  .pages_input_input {
+    border-radius: 8px;
+    height: 8vw;
+  }
+  .pages_input {
+    grid-template-columns: 85% 15% 0%;
+  }
+  .input_button {
+    font-size: 16px;
+    border-radius: 6px;
+  }
+  .input_clear {
+    width: 6vw;
+    right: 20vw;
+  }
+}
+@media (max-width: 376px) {
+  .pages_slidebar {
+    padding-bottom: 52px;
+  }
+  .pages_input {
+    height: fit-content;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+  }
+  .pages_input_input {
+    border-radius: 6px;
+    height: 8vw;
+  }
+  .pages_input {
+    grid-template-columns: 80% 20% 0%;
+  }
+  .input_button {
+    height: 9vw;
+    font-size: 16px;
+    border-radius: 6px;
+  }
+  .input_clear {
+    width: 6vw;
+    right: 25vw;
+  }
+}
+
+@media (max-width: 321px) {
+  .pages_slidebar {
+    padding-bottom: 52px;
+  }
+  .pages_input {
+    height: fit-content;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+  }
+  .pages_input_input {
+    border-radius: 6px;
+    height: 7vw;
+  }
+  .input_button {
+    font-size: 14px;
+    border-radius: 6px;
+    height: 8vw;
+  }
+  .input_clear {
+    width: 6vw;
+    right: 24.4vw;
+  }
 }

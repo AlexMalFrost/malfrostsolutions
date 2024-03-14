@@ -1,0 +1,15 @@
+.skeleton_box {
+  height: 50vw;
+  background-color: grey;
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .skeleton_box {
+    height: 70vw;
+  }
+}
+@media (max-width: 426px) {
+  .skeleton_box {
+    height: 100vw;
+  }
+}
