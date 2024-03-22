@@ -3,7 +3,6 @@ import Slidebar from '../../components/Slidebar/Slidebar';
 import Header from '../../components/Header/Header';
 import Fence from '../../components/Fence/Fence';
 import Footer from '../../components/Footer/Footer';
-import Skeleton from '../../components/Skeleton/Skeleton';
 import './Pages.scss';
 import { sendMessage } from '../../components/Message/message';
 
