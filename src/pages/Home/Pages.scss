@@ -18,16 +18,17 @@
 }
 .pages_input {
   display: grid;
+  align-items: center;
   grid-template-columns: 90% 10% 0%;
   width: 100%;
   padding-top: 22px;
   padding-bottom: 10px;
-  align-items: center;
 }
 .pages_input_input {
   border-radius: 10px;
   height: 3vw;
   padding: 0 0 0 1%;
+  font-size: 22px;
 }
 .input_button {
   height: 3.2vw;
@@ -37,8 +38,9 @@
 }
 .input_clear {
   position: relative;
+  height: fit-content;
   width: 2.1vw;
-  right: 11.1vw;
+  right: 11.4vw;
   opacity: 0.3;
   cursor: pointer;
   &:hover {
@@ -55,7 +57,7 @@
   }
   .input_clear {
     width: 2.5vw;
-    right: 11.6vw;
+    right: 12.1vw;
   }
 }
 @media (max-width: 768px) {
@@ -66,9 +68,12 @@
     height: 6.5vw;
     font-size: 18px;
   }
+  .pages_input_input {
+    font-size: 18px;
+  }
   .input_clear {
     width: 3.6vw;
-    right: 13vw;
+    right: 13.6vw;
   }
 }
 @media (max-width: 597px) {
@@ -86,9 +91,12 @@
     justify-content: center;
     align-items: center;
   }
+  .pages_input_input {
+    font-size: 2.6vw;
+  }
   .input_clear {
     width: 4.4vw;
-    right: 14.2vw;
+    right: 14.4vw;
   }
 }
 @media (max-width: 426px) {
@@ -103,6 +111,7 @@
   .pages_input_input {
     border-radius: 8px;
     height: 8vw;
+    font-size: 16px;
   }
   .pages_input {
     grid-template-columns: 85% 15% 0%;
@@ -112,8 +121,8 @@
     border-radius: 6px;
   }
   .input_clear {
-    width: 6vw;
-    right: 20vw;
+    width: 5vw;
+    right: 19.5vw;
   }
 }
 @media (max-width: 376px) {
@@ -128,6 +137,7 @@
   .pages_input_input {
     border-radius: 6px;
     height: 8vw;
+    font-size: 16px;
   }
   .pages_input {
     grid-template-columns: 80% 20% 0%;
@@ -148,13 +158,15 @@
     padding-bottom: 52px;
   }
   .pages_input {
-    height: fit-content;
+    position: static;
+    height: 8vw;
     padding-top: 4vw;
     padding-bottom: 4vw;
   }
   .pages_input_input {
     border-radius: 6px;
     height: 7vw;
+    font-size: 14px;
   }
   .input_button {
     font-size: 14px;

@@ -1,48 +1,40 @@
 import React from 'react';
 import './Slidebar.scss';
+import { useSelector } from 'react-redux';
+import type { RootState } from '../Redux/store';
+import langdData from '../Files/languages.json';
 
 const Slidebar: React.FC = () => {
+  const [loaded, setLoaded] = React.useState(false);
+  const langNumber = useSelector((state: RootState) => state.counter.value);
+  const lang = langdData[langNumber];
   return (
     <div className="parallax">
-      <div className="slideh1">
+      <div className={loaded ? 'slideh1' : 'displaynone'}>
         <div className="slideh1row">
-          <h1>Your City</h1>
-          <h1>Your Life</h1>
+          <h1>{lang[0]}</h1>
+          <h1>{lang[1]}</h1>
         </div>
-        <h1>Your Rules!</h1>
+        <h1>{lang[2]}</h1>
       </div>
+
       <div className="slidecontainer">
         <img
-          className="responcive"
-          src="https://raw.githubusercontent.com/AlexMalFrost/malfrostsolutions/pictures/mybackimage.png"
-          alt="description"
-        />
-        <img
-          className="transparent"
+          loading="lazy"
+          className={loaded ? 'transparent' : 'displaynone'}
+          onLoad={() => setLoaded(true)}
           src="https://raw.githubusercontent.com/AlexMalFrost/malfrostsolutions/pictures/Buildingmalfrost1.png"
-          alt="description"
-        />
-        <img
-          className="transparentt"
-          src="https://raw.githubusercontent.com/AlexMalFrost/malfrostsolutions/pictures/buildingmalfrost2.png"
-          alt="description"
         />
       </div>
-      <div className="topslidetext">
-        <h2 className="slideh2">Making business easier!</h2>
-        <p className="slidep">We do Solutions, You do Profit.</p>
+      <div className={loaded ? 'displaynone' : 'skelseton'}>
+        <h1 className="blob">Loading!</h1>
       </div>
-      <div className="downslidetext">
-        <p>
-          Welcome to the world of high speeds and precise results! We are team of professionals
-          specializing in providing innovative business solutions and advanced IT technologies. Our
-          goal is to help your business harmoniously fit into a dynamic urban environment, ensuring
-          rapid growth and maximum profit. Our company has flexibility and adaptability, allowing us
-          to find optimal solutions for the most complex tasks. We guarantee the confidentiality and
-          security of your data, as well as the efficiency of performing all assigned tasks. Your
-          success is our main goal! We are ready to make the most daring and ambitious ideas come
-          true, so your business becomes even more successful and competitive.
-        </p>
+      <div className={loaded ? 'topslidetext' : 'displaynone'}>
+        <h2 className="slideh2">{lang[3]}</h2>
+        <p className="slidep">{lang[4]}</p>
+        <div className={loaded ? 'downslidetext' : 'displaynone'}>
+          <p>{lang[5]}</p>
+        </div>
       </div>
     </div>
   );

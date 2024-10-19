@@ -19,7 +19,12 @@
   align-items: center;
   justify-content: center;
 }
-
+@mixin choose_choose {
+  display: grid;
+  position: absolute;
+  top: 76px;
+  left: 71px;
+}
 .none {
   top: 48px;
   transform: translate(0px, -268px);
@@ -27,7 +32,6 @@
   position: absolute;
   z-index: -1;
 }
-
 .menu {
   position: relative;
   right: 0px;
@@ -37,28 +41,28 @@
   background-color: white;
   height: 37px;
 }
-.menu_lang {
+.menu__lang {
   height: 37px;
-  margin-right: 4px;
+  margin-right: 0px;
   cursor: pointer;
 }
-.menu_choose {
+.menu-choose {
   transition: 1000ms;
   position: absolute;
   display: grid;
   top: 48px;
   z-index: -1;
 }
-.menu_choose_list {
+.menu-choose__list {
   @extend %templatelang;
   margin-bottom: 4px;
   transform: translate(0px, 0px);
   background-color: white;
 }
-.menu_lang_choose {
+.menu__lang_choose {
   @extend %templatelang;
 }
-.menu_logo {
+.menu-logo {
   align-items: center;
   justify-content: center;
   height: 37px;
@@ -68,11 +72,11 @@
   display: grid;
   cursor: pointer;
 }
-.menu_material_logo {
+.menu-logo__material {
   transition: 500ms;
   transform: rotate(45deg);
 }
-.menu_material_logo_rotated {
+.menu-logo__material_rotated {
   transition: 500ms;
   transform: rotate(90deg);
 }
@@ -83,6 +87,48 @@
   margin: 6px 1px;
   border-radius: 10px;
 }
+
+.menu-choose-check {
+  @include choose_choose;
+  height: fit-content;
+  opacity: 1;
+  transition: 1.5s ease;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.menu-choose-check-none {
+  @include choose_choose;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.menu-choose-check__flag {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spin 12s linear infinite;
+  z-index: -1;
+}
+
+.menu_check_spain {
+  transform: translateZ(33px);
+}
+.menu_check_russia {
+  transform: rotateY(-270deg) translateX(33px);
+  transform-origin: 100% 0;
+  position: relative;
+  bottom: 70px;
+}
+.menu_check_usa {
+  transform: translateZ(-33px) rotateY(180deg);
+  position: relative;
+  bottom: 142px;
+}
+.menu_check_braz {
+  transform: rotateY(270deg) translateX(-33px);
+  transform-origin: 0 50%;
+  position: relative;
+  bottom: 214px;
+}
 @media (min-width: 597px) {
   .menu {
     position: relative;
@@ -92,18 +138,14 @@
     height: 63px;
     width: 130px;
   }
-  .menu_wrap {
-    width: 63px;
-    height: 63px;
-    margin-right: 4px;
-  }
-  .menu_lang_choose {
+
+  .menu__lang_choose {
     @include align;
     font-size: 30px;
     width: 62px;
     height: 58px;
   }
-  .menu_logo {
+  .menu-logo {
     height: 64px;
     width: 62px;
     border-radius: 6px;
@@ -114,23 +156,33 @@
     height: 6px;
     margin: 6px 0px;
   }
-  .menu_choose_list {
+  .menu-choose__list {
     @include align;
     font-size: 30px;
     width: 62px;
     height: 62px;
   }
-  .menu_choose {
-    top: 76px;
+  .menu-choose {
+    top: 75px;
+  }
+}
+@media only screen and (min-width: 425px) and (max-width: 597px) {
+  .menu-choose {
+    top: 47px;
   }
 }
 @media (min-width: 1024px) {
-  .menu_logo:hover {
+  .menu-logo:hover {
     transition: 500ms;
     background-color: white;
     .lines {
       transition: 500ms;
       background-color: rgb(49, 60, 161);
     }
+  }
+}
+@media (max-width: 597px) {
+  .menu__lang {
+    margin-right: 2px;
   }
 }

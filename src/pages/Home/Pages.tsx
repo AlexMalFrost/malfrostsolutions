@@ -8,15 +8,50 @@ import { sendMessage } from '../../components/Message/message';
 
 const Pages: React.FC = () => {
   const [text, setText] = React.useState('');
-  const handleSubmit = async (event: any): Promise<void> => {
-    event.preventDefault();
-    console.log(text);
-    try {
-      await sendMessage(text);
-    } catch (e) {
-      console.log(e);
+  const [stopThrottle, setStopThrottle] = React.useState(true);
+  const timeoutIdRef = React.useRef<ReturnType<typeof setTimeout>>();
+  /*************  ✨ Codeium Command 🌟  *************/
+  /**
+   * Handles form submission, sends message to the chat and resets form.
+   * Implements debouncing, so that the function is not called too often.
+   */
+  const handleSubmit = async () => {
+    /**
+     * If the function was called too recently, do not call it again
+     * to prevent too frequent calls.
+     */
+    if (stopThrottle) {
+      try {
+        /**
+         * Sends message to the chat and resets the form.
+         */
+        await sendMessage(text);
+        setText('');
+      } catch (e) {
+        console.error(e);
+        console.log(e);
+      }
+      /**
+       * Set the flag to prevent too frequent calls.
+       */
+      setStopThrottle(false);
     }
+    /**
+     * Clear the timeout to prevent calling the function again.
+     */
+    clearTimeout(timeoutIdRef.current);
+    /**
+     * Set the timeout to call the function again after 4 seconds.
+     */
+    timeoutIdRef.current = setTimeout(() => {
+      /**
+       * Reset the flag to allow calling the function again.
+       */
+      setStopThrottle(true);
+      console.log('tytt');
+    }, 4000);
   };
+
   return (
     <div className="pages">
       <div className="leftside"></div>
