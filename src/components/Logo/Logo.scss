@@ -1,13 +1,13 @@
+.material_logo,
+.logo {
+  display: flex;
+}
 .logo {
   position: relative;
   left: 1px;
   margin-top: 8px;
-  display: flex;
   align-items: center;
   height: 37px;
-}
-.material_logo {
-  display: flex;
 }
 .svg {
   fill: rgb(49, 60, 161);
@@ -19,11 +19,8 @@
   margin-left: 4px;
   text-shadow: 1px 1px rgb(49, 60, 161);
 }
-
 @media (min-width: 597px) {
   .logo {
-    position: relative;
-    left: 1px;
     margin-top: 9px;
     height: 62px;
   }

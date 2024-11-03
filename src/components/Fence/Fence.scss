@@ -1,53 +1,46 @@
-.fences {
-  width: 100%;
-  display: flex;
+.fenceimage,
+.flip-box-front,
+.flip-box-back {
+  width: 20vw;
+  height: 100%;
+  border-radius: 10px;
 }
-.fencecontainer {
-  display: flex;
+.fences,
+.fencecontainer,
+.flip-box {
   width: 100%;
+  display: flex;
 }
 .fenceimage {
-  width: 20vw;
-  height: auto;
-  border-radius: 10px;
   object-fit: cover;
 }
 .flip-box {
-  display: flex;
-  width: 100%;
   height: fit-content;
   justify-content: space-between;
   cursor: pointer;
 }
-
 .flip-box-inner {
   position: relative;
   width: 20vw;
-  height: 11.2vw;
+  height: clamp(76px, 12vw, 162px);
   text-align: center;
   transition: transform 1s;
   transform-style: preserve-3d;
 }
-
 .flip-box-inner:hover {
   transform: rotateY(180deg);
 }
-
 .flip-box-front,
 .flip-box-back {
   position: absolute;
-  width: 20vw;
-  height: 100%;
+  font-size: clamp(0.2rem, 1.6vw, 1.4rem);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  border-radius: 10px;
 }
-
 .flip-box-front {
   background-color: #bbb;
   color: black;
 }
-
 .flip-box-back {
   background-image: linear-gradient(230deg, rgb(252, 169, 68), rgb(49, 60, 161));
   color: white;
@@ -56,64 +49,16 @@
 @media (max-width: 597px) {
   .fenceimage {
     width: 100%;
-    height: 22vw;
+    height: clamp(21vw, 21.5vw, 22vw);
     object-fit: cover;
   }
   .flip-box-front,
   .flip-box-back {
     width: 100%;
-    height: 22vw;
-    font-size: 7px;
+    height: clamp(21vw, 21.5vw, 22vw);
+    font-size: clamp(0.4rem, 2.2vw, 2rem);
   }
   .flip-box-inner {
     height: 20vw;
-  }
-}
-@media (max-width: 426px) {
-  .fenceimage {
-    width: 100%;
-    height: 20vw;
-    object-fit: cover;
-  }
-  .flip-box-front,
-  .flip-box-back {
-    width: 100%;
-    height: 20vw;
-    font-size: 7px;
-  }
-  .flip-box-inner {
-    height: 20vw;
-  }
-}
-@media (max-width: 376px) {
-  .fenceimage {
-    width: 100%;
-    height: 21vw;
-    object-fit: cover;
-  }
-  .flip-box-front,
-  .flip-box-back {
-    width: 100%;
-    height: 21vw;
-    font-size: 7px;
-  }
-  .flip-box-inner {
-    height: 21vw;
-  }
-}
-@media (max-width: 321px) {
-  .fenceimage {
-    width: 100%;
-    height: 21vw;
-    object-fit: cover;
-  }
-  .flip-box-front,
-  .flip-box-back {
-    width: 100%;
-    height: 21vw;
-    font-size: 7px;
-  }
-  .flip-box-inner {
-    height: 21vw;
   }
 }

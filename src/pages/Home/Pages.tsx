@@ -28,7 +28,6 @@ const Pages: React.FC = () => {
         await sendMessage(text);
         setText('');
       } catch (e) {
-        console.error(e);
         console.log(e);
       }
       /**
@@ -36,10 +35,7 @@ const Pages: React.FC = () => {
        */
       setStopThrottle(false);
     }
-    /**
-     * Clear the timeout to prevent calling the function again.
-     */
-    clearTimeout(timeoutIdRef.current);
+
     /**
      * Set the timeout to call the function again after 4 seconds.
      */
@@ -48,8 +44,11 @@ const Pages: React.FC = () => {
        * Reset the flag to allow calling the function again.
        */
       setStopThrottle(true);
-      console.log('tytt');
     }, 4000);
+    /**
+     * Clear the timeout to prevent calling the function again.
+     */
+    return () => clearTimeout(timeoutIdRef.current);
   };
 
   return (
@@ -69,26 +68,28 @@ const Pages: React.FC = () => {
           </div>
         </div>
         <div className="pages_input">
-          <input
-            className="pages_input_input"
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-          />
+          <div className="input_inputcover">
+            <input
+              className="pages_input_input"
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+            />
+            {text && (
+              <svg
+                onClick={() => setText('')}
+                className="input_clear"
+                height="48"
+                viewBox="0 0 48 48"
+                width="48"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M38 12.83l-2.83-2.83-11.17 11.17-11.17-11.17-2.83 2.83 11.17 11.17-11.17 11.17 2.83 2.83 11.17-11.17 11.17 11.17 2.83-2.83-11.17-11.17z" />
+                <path d="M0 0h48v48h-48z" fill="none" />
+              </svg>
+            )}
+          </div>
           <button className="input_button" onClick={handleSubmit}>
             Send
           </button>
-          {text && (
-            <svg
-              onClick={() => setText('')}
-              className="input_clear"
-              height="48"
-              viewBox="0 0 48 48"
-              width="48"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M38 12.83l-2.83-2.83-11.17 11.17-11.17-11.17-2.83 2.83 11.17 11.17-11.17 11.17 2.83 2.83 11.17-11.17 11.17 11.17 2.83-2.83-11.17-11.17z" />
-              <path d="M0 0h48v48h-48z" fill="none" />
-            </svg>
-          )}
         </div>
         <div className="pages_footer">
           <Footer />

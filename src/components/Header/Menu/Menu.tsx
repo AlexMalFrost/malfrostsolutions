@@ -23,7 +23,7 @@ const Menu: React.FC = () => {
   /**
    * The array of languages
    */
-  const langs = ['SP', 'RU', 'EN', 'PT'];
+  const langs = ['SP', 'RU', 'EN', 'BR'];
   /**
    * The dispatch function from Redux
    */
@@ -36,7 +36,7 @@ const Menu: React.FC = () => {
     deg = 0;
   } else if (showFlag === 'RU') {
     deg = -90;
-  } else if (showFlag === 'PT') {
+  } else if (showFlag === 'BR') {
     deg = 90;
   } else if (showFlag === 'EN') {
     deg = 180;

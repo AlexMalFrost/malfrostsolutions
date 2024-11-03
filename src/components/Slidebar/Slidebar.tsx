@@ -17,7 +17,6 @@ const Slidebar: React.FC = () => {
         </div>
         <h1>{lang[2]}</h1>
       </div>
-
       <div className="slidecontainer">
         <img
           loading="lazy"
